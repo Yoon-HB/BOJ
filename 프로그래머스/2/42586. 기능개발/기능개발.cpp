@@ -20,23 +20,9 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         cout << q.back() << " ";
     }
     
-//     int cnt = 1;
-//     while(!q.empty()){
-        
-//         int s = q.front();
-//         q.pop();
-//         if(q.front() <= s){
-//             cnt++;
-//             q.pop();
-//         }
-//         else{
-//             answer.push_back(cnt);
-//             cnt = 1;
-//         }
-//     }
-//     answer.push_back(cnt);
-    
     //스택이 비어있거나 큐에 있는 값이 크면 st.push
+    //st.front()보다 q.front()가 크면 스택의 사이즈를 answer에 삽닙
+    //st.front()보다 작으면 st.push
     while(!q.empty()){
         if(st.empty()){
             st.push(q.front());
@@ -55,8 +41,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         
     }
     answer.push_back(st.size());
-    //st.front()보다 q.front()가 크면 스택의 사이즈를 answer에 삽닙
-    //st.front()보다 작으면 st.push
+    
     
     return answer;
 }
