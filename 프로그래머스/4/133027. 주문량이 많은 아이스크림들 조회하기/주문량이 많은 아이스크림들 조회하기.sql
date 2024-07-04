@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT F.FLAVOR
+from FIRST_HALF F, JULY J
+where J.FLAVOR = F.FLAVOR
+GROUP BY FLAVOR
+HAVING sum(F.TOTAL_ORDER + J.TOTAL_ORDER)
+order by sum(F.TOTAL_ORDER + J.TOTAL_ORDER) desc
+limit 3
+
