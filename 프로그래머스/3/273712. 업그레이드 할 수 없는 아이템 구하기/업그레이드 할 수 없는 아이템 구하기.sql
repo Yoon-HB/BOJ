@@ -2,5 +2,5 @@
 
 select I.ITEM_ID, I.ITEM_NAME, I.RARITY
 from ITEM_INFO I, ITEM_TREE T
-where I.ITEM_ID = T.ITEM_ID and T.PARENT_ITEM_ID is not null and I.ITEM_ID not in (select distinct(PARENT_ITEM_ID) from ITEM_TREE where PARENT_ITEM_ID is not null)
+where I.ITEM_ID = T.ITEM_ID and I.ITEM_ID not in (select distinct(PARENT_ITEM_ID) from ITEM_TREE where PARENT_ITEM_ID is not null)
 order by I.ITEM_ID desc;
