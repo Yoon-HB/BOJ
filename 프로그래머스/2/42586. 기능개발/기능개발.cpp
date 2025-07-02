@@ -1,8 +1,4 @@
-#include <string>
-#include <vector>
-#include <queue>
-#include <stack>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> solution(vector<int> progresses, vector<int> speeds) {
@@ -21,7 +17,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     }
     
     //스택이 비어있거나 큐에 있는 값이 크면 st.push
-    //st.front()보다 q.front()가 크면 스택의 사이즈를 answer에 삽닙
+    //st.front()보다 q.front()가 크면 스택의 사이즈를 answer에 삽입
     //st.front()보다 작으면 st.push
     while(!q.empty()){
         if(st.empty()){
