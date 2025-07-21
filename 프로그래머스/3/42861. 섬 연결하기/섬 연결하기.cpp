@@ -37,14 +37,18 @@ int solution(int n, vector<vector<int>> costs) {
     
     }
     sort(edge, edge + e);
+    
     int cnt = 0;
     
     for(int i =0; i < e; i++){
         int a, b, cost;
         tie(cost, a, b) = edge[i];
+        
         if(!is_diff_group(a,b)) continue;
+        
         cnt++;
         answer += cost;
+        
         if(cnt == v-1) break;
     }
     return answer;
