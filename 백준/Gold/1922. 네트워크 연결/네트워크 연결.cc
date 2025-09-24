@@ -3,7 +3,7 @@ using namespace std;
 
 int N, M;
 tuple<int, int, int> edge[100002]; //간선 기준,,,
-vector<int> p(100002, -1);
+vector<int> p(1002, -1);
 
 int find(int x) {
 	if (p[x] < 0) return x;
