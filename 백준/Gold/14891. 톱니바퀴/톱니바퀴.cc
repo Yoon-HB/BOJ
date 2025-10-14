@@ -5,16 +5,12 @@ vector<int> arr[5];
 
 // 시계 방향 회전
 void turn(int n) {
-    int tmp = arr[n].back();   
-    arr[n].pop_back();         
-    arr[n].insert(arr[n].begin(), tmp); 
+    rotate(arr[n].rbegin(), arr[n].rbegin() + 1, arr[n].rend());
 }
 
 // 반시계 방향 회전
 void rturn(int n) {
-    int tmp = arr[n].front();  
-    arr[n].erase(arr[n].begin()); 
-    arr[n].push_back(tmp);     
+    rotate(arr[n].begin(), arr[n].begin() + 1, arr[n].end());
 }
 
 int main() {
